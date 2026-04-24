@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Blusas Personalizadas</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 90%;
+  margin: 5px;
+  padding: 8px;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>👕 Sua Blusa Personalizada</h1>
+  <p>Escolha um modelo e personalize!</p>
+</header>
+
+<div class="produtos">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Preta">
+    <h3>Blusa Preta</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Preta')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Branca">
+    <h3>Blusa Branca</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Branca')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Estilosa">
+    <h3>Blusa Estilosa</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Estilosa')">Personalizar</button>
+  </div>
+
+</div>
+
+<br>
+
+<h2>Descreva sua personalização</h2>
+
+<input type="text" id="nome" placeholder="Seu nome">
+<textarea id="desc" placeholder="Como quer sua blusa"></textarea>
+
+<br>
+
+<button onclick="enviar()">Finalizar Pedido</button>
+
+<script>
+let produtoEscolhido = "";
+
+function pedido(produto) {
+  produtoEscolhido = produto;
+  alert("Você escolheu: " + produto);
+}
+
+function enviar() {
+  var nome = document.getElementById("nome").value;
+  var desc = document.getElementById("desc").value;
+
+  var numero = "5585992415135";
+
+  var msg = `Olá, sou ${nome}. Quero ${produtoEscolhido}. Personalização: ${desc}`;
+
+  var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Blusas Personalizadas</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 90%;
+  margin: 5px;
+  padding: 8px;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>👕 Sua Blusa Personalizada</h1>
+  <p>Escolha um modelo e personalize!</p>
+</header>
+
+<div class="produtos">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Preta">
+    <h3>Blusa Preta</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Preta')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Branca">
+    <h3>Blusa Branca</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Branca')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Estilosa">
+    <h3>Blusa Estilosa</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Estilosa')">Personalizar</button>
+  </div>
+
+</div>
+
+<br>
+
+<h2>Descreva sua personalização</h2>
+
+<input type="text" id="nome" placeholder="Seu nome">
+<textarea id="desc" placeholder="Como quer sua blusa"></textarea>
+
+<br>
+
+<button onclick="enviar()">Finalizar Pedido</button>
+
+<script>
+let produtoEscolhido = "";
+
+function pedido(produto) {
+  produtoEscolhido = produto;
+  alert("Você escolheu: " + produto);
+}
+
+function enviar() {
+  var nome = document.getElementById("nome").value;
+  var desc = document.getElementById("desc").value;
+
+  var numero = "5585992415135";
+
+  var msg = `Olá, sou ${nome}. Quero ${produtoEscolhido}. Personalização: ${desc}`;
+
+  var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Blusas Personalizadas</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f5f5f5;
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 90%;
+  margin: 5px;
+  padding: 8px;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>👕 Sua Blusa Personalizada</h1>
+  <p>Escolha um modelo e personalize!</p>
+</header>
+
+<div class="produtos">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Preta">
+    <h3>Blusa Preta</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Preta')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Branca">
+    <h3>Blusa Branca</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Branca')">Personalizar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/250x250?text=Blusa+Estilosa">
+    <h3>Blusa Estilosa</h3>
+    <p>R$ 100,00</p>
+    <button onclick="pedido('Blusa Estilosa')">Personalizar</button>
+  </div>
+
+</div>
+
+<br>
+
+<h2>Descreva sua personalização</h2>
+
+<input type="text" id="nome" placeholder="Seu nome">
+<textarea id="desc" placeholder="Como quer sua blusa"></textarea>
+
+<br>
+
+<button onclick="enviar()">Finalizar Pedido</button>
+
+<script>
+let produtoEscolhido = "";
+
+function pedido(produto) {
+  produtoEscolhido = produto;
+  alert("Você escolheu: " + produto);
+}
+
+function enviar() {
+  var nome = document.getElementById("nome").value;
+  var desc = document.getElementById("desc").value;
+
+  var numero = "5585992415135";
+
+  var msg = `Olá, sou ${nome}. Quero ${produtoEscolhido}. Personalização: ${desc}`;
+
+  var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
